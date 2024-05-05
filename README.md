@@ -4,11 +4,10 @@ Este é um script Python simples para extrair dados do calendário litúrgico de
 
 ## Como Usar
 
-1. Certifique-se de ter o Python 3.x e o PostgreSQL instalados em sua máquina.
+1. Certifique-se de ter o Docker e o Docker Compose instalados em sua máquina.
 2. Clone este repositório.
-3. Instale as dependências executando `pip install -r requirements.txt`.
-4. Edite as informações do banco de dados e outras variáveis no arquivo `main.py`.
-5. Execute o script Python com `python main.py`.
+3. Construa e inicie os contêineres com `docker compose up --build`. Isso também instalará as dependências necessárias.
+4. O script `main.py` será executado automaticamente pelo contêiner da aplicação, utilizando as configurações de conexão ao banco de dados definidas no `docker-compose.yml`.
 
 ## Funcionalidades
 

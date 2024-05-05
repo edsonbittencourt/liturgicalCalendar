@@ -1,7 +1,17 @@
+import os
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
+
+host = os.getenv('DATABASE_HOST', 'db')  # This line was changed from DB_HOST to DATABASE_HOST
+dbname = os.getenv('DB_NAME', 'postgres')
+user = os.getenv('DB_USER', 'user')
+password = os.getenv('DB_PASSWORD', 'password')
+newDbName = os.getenv('NEW_DB_NAME', 'liturgical_calendar')
 
 def connectToDatabase(host, dbname, user, password):
     cnxnString = f"host='{host}' dbname='{dbname}' user='{user}' password='{password}'"
@@ -66,12 +76,6 @@ def insertData(conn, tableName, data):
         else:
             print("Número incorreto de elementos na linha:", row)
     print("Dados inseridos com sucesso")
-
-host = 'substituir'
-dbname = 'substituir'
-user = 'substituir'
-password = 'substituir'
-newDbName = 'substituir'
 
 connMain = connectToDatabase(host, dbname, user, password)
 createDatabase(connMain, newDbName)
