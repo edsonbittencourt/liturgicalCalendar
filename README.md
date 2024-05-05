@@ -1,3 +1,5 @@
+[![Docker](https://github.com/edsonbittencourt/liturgicalCalendar/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/edsonbittencourt/liturgicalCalendar/actions/workflows/docker-publish.yml)
+
 # Scraping e Armazenamento de Dados Litúrgicos
 
 Este é um script Python simples para extrair dados do calendário litúrgico de um site e armazená-los em um banco de dados PostgreSQL.
