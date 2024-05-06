@@ -21,3 +21,5 @@ Este é um script Python simples para extrair dados do calendário litúrgico de
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests. Deus abençoe!
 
+## Viva Cristo Rei
+
